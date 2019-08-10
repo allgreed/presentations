@@ -1,0 +1,7 @@
+{
+  "theme": "moon",
+  "highlight-theme": "github",
+  "css": "style.css",
+  "separator": "<!--s-->",
+  "verticalSeparator": "<!--v-->"
+}

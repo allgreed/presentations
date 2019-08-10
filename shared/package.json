@@ -1,0 +1,7 @@
+{
+  "name": "test",
+  "private": "true",
+  "dependencies": {
+    "reveal-md": "^3.1.0"
+  }
+}
