@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# $1 presentation title, with hyphens, e.g. my-presentation-title
+
+if [ -z $1 ]
+then
+    echo "Usage: $0 my-presentation-title"
+    exit 1
+fi
+
+mkdir -p $1
+
+for f in `ls shared`
+do
+ln -s ../shared/$f $1/$f
+done
+
+for f in `ls template`
+do
+cp template/$f $1/$f
+done
