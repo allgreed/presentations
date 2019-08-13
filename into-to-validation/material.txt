@@ -1,0 +1,82 @@
+inspiration:
+- https://abstracta.us/blog/tools/ultimate-list-100-software-testing-quotes/
+
+========
+
+- there were old good, simple times
+- few computers
+- software was small
+- software was used for reasearch and military 
+- <- this point needs improvment
+
+=====
+
+- fast forward to current year:
+    - disclaimer, info + whoami
+
+=====
+
+- trust in software
+- our dependance on software
+- software is hard - because of the stack
+
+- what bad software causes - from suffering, through loss to death
+---
+
+- an app - collection of behaviours
+- bug => behaviour that is unexpected by the user
+- defect => deviation from speck
+
+- QA, validation, testing - I'm gonna talk a bit about QA, and about testing - meaning of those 3
+
+- the business side - how much testing happens at each stage + impact
+    - how end user quality is defined?
+
+    - what is the worst case then?
+    - which is better? (because rework is more costly at further stages)
+    - which is ideal?
+
+    - Linus case? "Given enough eyes all bugs are shallow"
+---
+
+- so... who should test? (should be rethoritcal at this point)
+
+- only automated testing matters
+
+- the only excuse for not testing is not knwoing how to test
+
+---
+
+- testable code => tests (Machiavelli reference)
+
+- kinds of tests - unit, integration, e2e
+
+- pure code vs. unpure code vs. DI code
+
+- unit tests
+- data-driven tests
+- property based tests
+- stateful property based tests
+
+- tdd
+- bdd
+
+---
+
+- qa
+    - type systems
+    - asm
+    - C
+    - javascript
+    - algebraic datatypes - haskell & rust
+    - idris
+    - coq / tla+
+
+https://www.youtube.com/results?search_query=tla%2B
+
+- ethics - why do we have still so crappy software?
+
+takeaways:
+- make your code testable
+- test to speed up the pace
+- teach how to test
