@@ -16,6 +16,7 @@ title: Intro to Validation, QA and the Universe
 <!--s-->
 
 ## Disclaimer
+I work at Intel, but I'm not representing Intel today. All opinions are my own.
 
 <!--s-->
 
@@ -77,3 +78,137 @@ QA, validation, testing - venn
 
 <!--s-->
 ## ...
+<!--s-->
+## Ok, but how?
+<!--v-->
+
+### The spec
+- function that returns n-th number of Fibonacci sequence
+<!--v-->
+
+### The testing framework
+```js
+type TestFn = () => bool
+
+tests: Array<TestFn> = [
+    ...
+]
+
+for (const test of tests)
+{
+    if (! test())
+    {
+        process.exit(8)
+    }
+}
+```
+<!--v-->
+
+### The test
+```js
+function fib(n: number): number { ... }  // interface
+
+const testFibbonachiFunction = () => {
+    return fib(8) === 21
+}
+
+const tests = [ testFibbonachiFunction ]
+
+for (const test of tests)
+{
+    if (! test())
+    {
+        process.exit(8)
+    }
+}
+```
+<!--v-->
+
+### The code
+```js
+function fib(n) {
+    if (n == 0) return 0
+    if (n == 1) return 1
+
+    return fib (n - 1) + fib (n - 2)
+}
+```
+```
+const testFibbonachiFunction = () => {
+    return fib(8) === 21
+}
+
+const tests = [ testFibbonachiFunction ]
+
+for (const test of tests)
+{
+    if (! test())
+    {
+        process.exit(8)
+    }
+}
+```
+
+<!--v-->
+### Production grade - with Jest
+```js
+function fib(n) {
+    if (n == 0) return 0
+    if (n == 1) return 1
+
+    return fib (n - 1) + fib (n - 2)
+}
+
+test("fib(n) returns n-th number of the fibbonachi sequence",
+    () => {
+        expect(fib(8)).toBe(21);
+});
+```
+
+<!--v-->
+### Technically
+
+- what we just did === unit test
+- unit test + setup === integration test
+- integration test + more setup === E2E test
+<!--s-->
+
+## Can we do better?
+<!--v-->
+### Of course - data-driven tests
+
+```js
+test("ein", () => {
+    expect(fib(0)).toBe(0);
+});
+
+test("zwei", () => {
+    expect(fib(1)).toBe(21);
+});
+
+test("drei", () => {
+    expect(fib(8)).toBe(21);
+});
+
+test("zwei", () => {
+    expect(fib(9)).toBe(34);
+});
+```
+<!--v-->
+```js
+const each = require('jest-each').default;
+
+...
+
+each([
+    [0, 0],
+    [1, 1],
+    [8, 21],
+    [9, 34]
+])
+.test("fib(%d) == %d", (n, expected) => {
+    expect(fib(n)).toBe(expected);
+  }
+);
+```
+
