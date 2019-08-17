@@ -64,11 +64,22 @@ Absolute value: -2147483648
 
 <!--v-->
 #### Explanation
-<!-- TODO -->
+TODO
 
 <!--v-->
 #### Java good
-<!-- TODO: java example -->
+TODO
+
+
+<!--s-->
+## What is ...?
+- Love <span class=fragment>-> baby, don't hurt me.</span> <span class="fragment">no more.</span>
+- App <span class=fragment>-> collection of behaviours</span>
+- Bug <span class=fragment>-> behaviour that is unexpected by the user</span>
+- Defect <span class=fragment>-> deviation from spec</span>
+
+Note: "Our app has 3 bugs and 4 defects"
+bug might be a feature, and defect might not be bad
 
 <!--s-->
 ## Let's talk quality
@@ -166,11 +177,91 @@ test("fib(n) returns n-th number of the fibbonachi sequence",
 ```
 
 <!--v-->
-### Technically
+
+### Refactor! Refactor all the things!
+
+- TODO
+
+<!--s-->
+
+## That was cute
+
+```js
+function processInvoice(clientID, amount)
+{
+    const dbClient = await DB.getClientbyID(clientID)
+          
+    await stripe.charge(dbClient.stripeAccount, amount)
+        .catch(err => {
+            console.error("Pay up!") 
+        })
+
+    const message = `Successful payment for ${}`
+    await pushNotification.send(client.activeSessions, message)
+
+    await sendEmail()
+}
+```
+Note: the simple examples != production code
+Because production code is rarely pure function
+
+<!--v-->
+
+### Let's monkey patch:
+- database
+- http request to Stripe
+- console.log()
+- email
+
+# NOPE! <!-- TODO: red + slide -->
+
+<!--v-->
+### Test vs. testable code
+> There cannot be good laws without good armies, and where there are good laws, there must be good arms, so I he will only discuss arms, not laws.
+>
+> ~ Niccolò Machiavelli
+
+Note: Test -> testable code; Testable code -> tests; I'll talk about testable code
+
+<!--v-->
+### Dependency Injection
+
+```js
+function processInvoice(clientID, amount,
+    DB = psqlConnection,
+    stripe = stripeClient,
+    console = console,
+    pushNotification = socketIOManager,
+    sendEmail = sendGridProviderController,
+)
+{
+    ... // pure function now :D
+}
+```
+<!--v-->
+
+### Boundaries
+
+- repositories
+- reference the presentation about test boundaries
+- TODO
+
+<!--v-->
+### Hexagonal architecture
+
+- TODO
+
+<!--s-->
+
+## Technically
 
 - what we just did === unit test
 - unit test + setup === integration test
 - integration test + more setup === E2E test
+<!--v-->
+
+### But...
+
 <!--s-->
 
 ## Can we do better?

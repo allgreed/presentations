@@ -3,29 +3,15 @@ inspiration:
 
 ========
 
-- there were old good, simple times
-- few computers
-- software was small
-- software was used for reasearch and military 
-- <- this point needs improvment
-
-=====
-
-- fast forward to current year:
-    - disclaimer, info + whoami
-
-=====
-
-- trust in software
-- our dependance on software
+- junior high, playing Assasin's Creed - it crashed
+- ???
+- our dependance on software - box, laptop, phone, car, lhc
 - software is hard - because of the stack
+=====
 
-- what bad software causes - from suffering, through loss to death
----
+- disclaimer, info + whoami
 
-- an app - collection of behaviours
-- bug => behaviour that is unexpected by the user
-- defect => deviation from speck
+==============
 
 - QA, validation, testing - I'm gonna talk a bit about QA, and about testing - meaning of those 3
 
@@ -35,8 +21,6 @@ inspiration:
     - what is the worst case then?
     - which is better? (because rework is more costly at further stages)
     - which is ideal?
-
-    - Linus case? "Given enough eyes all bugs are shallow"
 ---
 
 - so... who should test? (should be rethoritcal at this point)
@@ -46,34 +30,35 @@ inspiration:
 - the only excuse for not testing is not knwoing how to test
 
 ---
-after tests:
+can we do better:
 
-- refactor with confidence
-
----
-- testable code => tests (Machiavelli reference)
-- unpure code vs. DI code vs. pure code <- testing side effects
-
----
 - property based tests
 - stateful property based tests
 
-- tdd
-- bdd
 
 ---
 
 - qa
+
+    - techiniques
+        - tdd
+        - bdd
+        - pair programming
+
     - type systems
         - asm
         - C
-        - javascript
+        - python
         - algebraic datatypes - haskell & rust
-        - idris
-    - coq / tla+
+        - idris - dependant types
+
     - ???
+        - coq / tla+
+        - ???
 
 https://www.youtube.com/results?search_query=tla%2B
+
+================
 
 - ethics - why do we have still so crappy software?
 
@@ -84,3 +69,4 @@ takeaways:
 
 ====
 - maybe add some screnshots from testing tools? :D
+- Linus case? "Given enough eyes all bugs are shallow"
