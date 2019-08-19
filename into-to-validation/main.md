@@ -15,11 +15,6 @@ title: Intro to Validation, QA and the Universe
 
 <!--s-->
 
-## Disclaimer
-I work at Intel, but I'm not representing Intel today. All opinions are my own.
-
-<!--s-->
-
 ## Current state of affairs
 <!-- pic of laptop, telephone and car -->
 Note: 
@@ -27,6 +22,12 @@ Note:
 - computer that can make calls
 - computer that can drive
 <!--v-->
+
+## Disclaimer
+I work at Intel, but I'm not representing Intel today. All opinions are my own.
+
+<!--s-->
+
 ### The stack
 http://chickencrap.com/media_images/2058.jpg
 <!--v-->
@@ -68,27 +69,46 @@ TODO
 
 <!--v-->
 #### Java good
-TODO
+```
+public class JavaGood
+{
+    public static void main(String []args)
+    {
+        System.out.println(Math.abs(Integer.MIN_VALUE));
+    }
+}
+```
+```
+-2147483648 // Nope xD
+```
 
 
 <!--s-->
-## What is ...?
+
+## What is quality?
+
+TODO: quality charts
+
+<!--v-->
+
+### What is ...?
 - Love <span class=fragment>-> baby, don't hurt me.</span> <span class="fragment">no more.</span>
 - App <span class=fragment>-> collection of behaviours</span>
 - Bug <span class=fragment>-> behaviour that is unexpected by the user</span>
-- Defect <span class=fragment>-> deviation from spec</span>
+- Defect <span class=fragment>-> deviation from the spec</span>
 
-Note: "Our app has 3 bugs and 4 defects"
-bug might be a feature, and defect might not be bad
+Note: bug might be a feature, and defect might not be bug
 
-<!--s-->
-## Let's talk quality
-
-QA, validation, testing - venn
-+ spot indicating the covered topics
+<!--v-->
+### The tools
+<img src="/img/venn.png" style="background: 0; border: 0; box-shadow: none"/>
 
 <!--s-->
-## ...
+## Ground rules
+
+- TODO so... who should test? (should be rethoritcal at this point)
+- TODO only automated validation matters
+- TODO the only excuse for not validating is not knwoing how to validate
 <!--s-->
 ## Ok, but how?
 <!--v-->

@@ -13,22 +13,13 @@ inspiration:
 
 ==============
 
-- QA, validation, testing - I'm gonna talk a bit about QA, and about testing - meaning of those 3
-
 - the business side - how much testing happens at each stage + impact
     - how end user quality is defined?
 
     - what is the worst case then?
+
     - which is better? (because rework is more costly at further stages)
     - which is ideal?
----
-
-- so... who should test? (should be rethoritcal at this point)
-
-- only automated testing matters
-
-- the only excuse for not testing is not knwoing how to test
-
 ---
 can we do better:
 

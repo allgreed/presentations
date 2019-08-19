@@ -1,2 +1,5 @@
 # C executable
 a.out
+
+# Python lib files
+env
