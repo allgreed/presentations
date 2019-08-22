@@ -24,7 +24,7 @@ Note:
 <!--v-->
 
 ## Disclaimer
-I work at Intel, but I'm not representing Intel today. All opinions are my own.
+I work at Intel, but I'm not representing Intel today. All my opinions are belong to us.
 
 <!--s-->
 
@@ -54,15 +54,15 @@ int main()
 
 ```
 
-TODO: fragment
-```
-Raw value: 1
+
+<pre><code class="nohighlight" style="background: #3f3f3f" data-noescape>Raw value: 1
 Absolute value: 1
 Raw value: -5
 Absolute value: 5
 Raw value: -2147483648
-Absolute value: -2147483648
-```
+Absolute value: <span class="fragment highlight-red" data-fragment-index="2">-2147483648
+</span></code></pre>
+<!-- .element: class="fragment fade-up" data-fragment-index="1" -->
 
 <!--v-->
 #### Explanation
@@ -79,10 +79,10 @@ public class JavaGood
     }
 }
 ```
-TODO: fragment
 ```
 -2147483648 // Nope xD
 ```
+<!-- .element: class="fragment fade-up"  -->
 
 
 <!--s-->
@@ -325,34 +325,44 @@ Nope! Just run the test suite
 
 ## That was cute
 
-```js
-function processInvoice(clientID, amount)
+<pre><code style="background: #3f3f3f" data-noescape>function processInvoice(customerID, amount)
 {
-    const dbClient = await DB.getClientbyID(clientID)
+    const customer = <span class="fragment highlight-blue">await DB.getCustomerbyID(customerID)</span>
+
+    ... // business stuff with lots of ifs, for loops - etc.
           
-    await stripe.charge(dbClient.stripeAccount, amount)
-        .catch(err => {
-            console.error("Pay up!") 
-        })
+    await <span class="fragment highlight-blue">stripe.charge(customer.stripeAccount, amount)</span>
 
-    const message = `Successful payment for ${}`
-    await pushNotification.send(client.activeSessions, message)
+    await <span class="fragment nohiglight highlight-blue">pushNotification.send(customer)</span>
 
-    await sendEmail()
+    await <span class="fragment highlight-blue">sendEmail()</span>
 }
-```
+</code></pre>
+
 Note: the simple examples != production code
 Because production code is rarely pure function
+!No error handling for the sake of demo
 
 <!--v-->
 
 ### Let's monkey patch:
-- database
-- http request to Stripe
-- console.log()
-- email
 
-# NOPE! <!-- TODO: red + slide -->
+- <span class="fragment">database cursor, push notification</span>
+- <span class="fragment">http request to Stripe, email provider</span>
+- <span class="fragment">built-in Javascript constructs - Promise monad</span>
+- <span class="fragment">ropjar flopnaxer</span>
+- <span class="fragment">kernel printer driver</span>
+
+<h1 style="color: #dc322f;" class="fragment">NOPE!</h1>
+Note: unmaintainable madness!
+
+<!--v-->
+
+![](img/square-peg-round-hole.jpeg)
+
+
+Note: Square Peg Round Hole, almost like 2 girls... xD
+Kwadratowy sworzeń okrągły otwór
 
 <!--v-->
 ### Test vs. testable code
@@ -377,35 +387,79 @@ function processInvoice(clientID, amount,
     ... // pure function now :D
 }
 ```
+Note: but this is kind of hacky... and gets messy quickly :C
 <!--v-->
 
-### Boundaries
+### Why we test?
+```
+function processInvoice(customerID, amount)
+{
+    const customer = await DB.getCustomerbyID(customerID)
+    await stripe.charge(customer.stripeAccount, amount)
+    await pushNotification.send(customer)
+    await sendEmail()
 
-- repositories
-- reference the presentation about test boundaries
-- TODO
-
+    // business stuff deliberately ommited
+}
+```
+Note: cyclomatic complexity: 1 => only one path to go through the code
 <!--v-->
-### Hexagonal architecture
+```
+function processInvoice(customerID, amount)
+{
+    const customer = await DB.getCustomerbyID(customerID)
 
-- TODO
+    const invoiceCalculations = calculateInvoiceStuff(customer)
 
+    await stripe.charge(customer.stripeAccount, amount)
+    await pushNotification.send(customer)
+    await sendEmail()
+}
+```
+```
+function calculateInvoiceStuff(customer: Customer)
+{
+    ... // business stuff with lots of ifs, for loops - etc.
+    
+    return something
+}
+```
+
+Note: Dependency inversion principle - calculation only relies on Customer
+<!--v-->
+### IO works
+
+- <span class="fragment highlight-green">HTTP</span>
+- <span class="fragment highlight-green">emails</span>
+- <span class="fragment highlight-red">that lad's code, in the back</span>
+- <span class="fragment highlight-green">writing text to a file</span>
+- <span class="fragment highlight-red">your code</span>
+
+Note: what definitely works?
 <!--s-->
 
-## Technically
+## But I wanna validate IO!
 
-- what we just did === unit test
-- unit test + setup === integration test
-- integration test + more setup === E2E test
+- does my <span class="fragment highlight-blue" data-fragment-index="1">module</span> work -> <span class="fragment highlight-blue" data-fragment-index="1">unit</span> test
+- does my module work <span class="fragment highlight-blue" data-fragment-index="2">with X</span> -> <span class="fragment highlight-blue" data-fragment-index="2">integration</span> test
+- did I glue <span class="fragment highlight-blue" data-fragment-index="3">all the stuff</span> correctly -> <span class="fragment highlight-blue" data-fragment-index="3">E2E</span> test
+
+Note: maybe only do E2E?
+validating IO is slow and hard to maintain - don't abuse
 <!--v-->
 
-### But...
+### Hexagonal architecture
 
+- TODO - https://marcus-biel.com/wp-content/uploads/2015/06/sasas-300x259.png <- do a pretty picture
+- seperate IO from business
+- more on https://www.simpleorientedarchitecture.com/defining-test-boundaries/
+
+Note: getting into the real of QA again -> making it easy to validate
 <!--s-->
 
 ## Can we do better?
 <!--v-->
-### Of course - data-driven tests
+### Of course - data-driven / parametrized tests
 
 ```js
 test("ein", () => {

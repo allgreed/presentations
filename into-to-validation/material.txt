@@ -11,10 +11,6 @@
 - disclaimer, info + whoami
 
 ==============
-after units
-- integration / e2e tests - testable apps => move hexagonal architecture here
-
----
 can we do better:
 
 - property based tests
@@ -25,8 +21,7 @@ can we do better:
 
 - qa
     - techiniques
-        - tdd
-        - bdd
+        - tdd / bdd
         - pair programming
 
     - type systems
@@ -38,11 +33,8 @@ can we do better:
 
     - ???
         - coq / tla+
-        - ???
-
-https://www.youtube.com/results?search_query=tla%2B
-
-- temporal logic for proving consensus algorithms
+        - https://www.youtube.com/results?search_query=tla%2B
+        - temporal logic for proving consensus algorithms
 ================
 
 - ethics - why do we have still so crappy software?
