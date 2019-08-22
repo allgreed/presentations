@@ -85,9 +85,12 @@ public class JavaGood
 
 <!--s-->
 
-## What is quality?
+## Vilans
 
-TODO: quality charts
+<img src="/img/bug.jpg" style="width: 45%;" />
+<img src="/img/defect.jpg" style="width: 45%;" />
+
+Note: bugs and defects
 
 <!--v-->
 
@@ -99,18 +102,84 @@ TODO: quality charts
 
 Note: bug might be a feature, and defect might not be bug
 
+<!--s-->
+### Let's talk quality
+
+<img src="/gen/thisor.png" style="width: 45%;" />
+<img src="/gen/thator.png" style="width: 45%;" />
+
+Note: bug detection at certain stages - which one is better?
+Shit breaks == bug detected in production
+
 <!--v-->
-### The tools
-<img src="/img/venn.png" style="background: 0; border: 0; box-shadow: none"/>
+
+### Definition of crap
+![](/gen/crap.png)
+
+<!--v-->
+### The ultimate fix
+![](/gen/hehfix.png)
+
+Note: this will work, 100%, right?
+
+<!--v-->
+### Law of diminishing returns
+
+![](/img/pizza.jpg)
+
+Note: Sheryl Sandberg - "Finished is better than perfect", Pareto rule
+
+<!--v-->
+
+![](/gen/realhehfix.png)
+
+Note: now - this is uber, oui?
+
+<!--v-->
+### What IBM did...
+
+<div style="max-height: 180px; overflow: hidden;">
+<img src="/img/ibm-study-bug-cost.jpg" />
+</div>
+
+<small>[full study](ftp://ftp.software.ibm.com/software/rational/info/do-more/RAW14109USEN.pdf)</small>
+
+Note: cost of rework, Mariner 1, 1962, $18.5 million - attributed to missing comma or extraneous semicolon
+
+<!--v-->
+### What do we trully desire :3
+
+![](/gen/desired.png)
+
+Note: this is too single-minded however
+
+<!--v-->
+### Bugs not created equal
+
+![](img/many-bugs.jpg)
+
+Note: specs -> more fine grained => more potential for defects
+
+<!--v-->
+
+### What we'll get
+
+![](/gen/real.png)
+
+Note: because bugs are added and effectively caught at different stages - you can sleep in advance!
 
 <!--s-->
-## Ground rules
+## The heros
+<img src="/img/venn.png" style="background: 0; border: 0; box-shadow: none"/>
+
+<!--v-->
+### Ground rules
 
 - TODO so... who should test? (should be rethoritcal at this point)
 - TODO only automated validation matters
 - TODO the only excuse for not validating is not knwoing how to validate
 <!--s-->
-## Ok, but how?
+## Ok, but how? - let's validate!
 <!--v-->
 
 ### The spec

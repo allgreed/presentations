@@ -7,19 +7,16 @@ inspiration:
 - ???
 - our dependance on software - box, laptop, phone, car, lhc
 - software is hard - because of the stack
+- abstration? that leaks
 =====
 
 - disclaimer, info + whoami
 
 ==============
+after units
 
-- the business side - how much testing happens at each stage + impact
-    - how end user quality is defined?
+- integration / e2e tests - testable apps
 
-    - what is the worst case then?
-
-    - which is better? (because rework is more costly at further stages)
-    - which is ideal?
 ---
 can we do better:
 
@@ -30,7 +27,6 @@ can we do better:
 ---
 
 - qa
-
     - techiniques
         - tdd
         - bdd
@@ -49,6 +45,7 @@ can we do better:
 
 https://www.youtube.com/results?search_query=tla%2B
 
+- temporal logic for proving consensus algorithms
 ================
 
 - ethics - why do we have still so crappy software?
