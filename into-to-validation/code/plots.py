@@ -37,6 +37,13 @@ plots = [
         Bar(label="n", value=5),
         Bar(label="production", value=20),
     ]),
+    Plot(name="testers", title="Software developement lifecycle", bars=[
+        Bar(label="idea", value=5),
+        Bar(label="design", value=10),
+        Bar(label="code", value=60),
+        Bar(label="...", value=10),
+        Bar(label="manual\ntesting", value=5),
+    ]),
 ]
 
 some_sdlc_stages = [

@@ -54,6 +54,7 @@ int main()
 
 ```
 
+TODO: fragment
 ```
 Raw value: 1
 Absolute value: 1
@@ -68,7 +69,7 @@ Absolute value: -2147483648
 TODO
 
 <!--v-->
-#### Java good
+#### Java good, si?
 ```
 public class JavaGood
 {
@@ -78,6 +79,7 @@ public class JavaGood
     }
 }
 ```
+TODO: fragment
 ```
 -2147483648 // Nope xD
 ```
@@ -91,6 +93,7 @@ public class JavaGood
 <img src="/img/defect.jpg" style="width: 45%;" />
 
 Note: bugs and defects
+errors ~ bugs | defects
 
 <!--v-->
 
@@ -172,14 +175,42 @@ Note: because bugs are added and effectively caught at different stages - you ca
 ## The heros
 <img src="/img/venn.png" style="background: 0; border: 0; box-shadow: none"/>
 
-<!--v-->
-### Ground rules
-
-- TODO so... who should test? (should be rethoritcal at this point)
-- TODO only automated validation matters
-- TODO the only excuse for not validating is not knwoing how to validate
+Note: QA - increasing quality and making it cheaper
+Testing - fighting bugs
+Validation - fighting defects
+I'll talk mostly about validation and a bit abount QA
 <!--s-->
-## Ok, but how? - let's validate!
+
+### Let the testers do the testing!
+
+![](gen/testers.png)
+
+Note: before we begin - some groud rules for validation. Tester -> testing. You -> validation.
+
+<!--v-->
+
+### Manual validation? Nope.
+
+![](img/robot.jpeg)
+Note: robots >> humans at certain tasks. Pick and place robot - 150 elements per minute with superb accuracy. Reduces regressions to minimum.
+<!--v-->
+ 
+### Why not validate?
+
+<img src="/img/orly.png" style="width: 30%" />
+
+<!--v-->
+### The excuses
+
+- <span class=fragment>time pressure</span><span class="fragment"> -> you'll have to get it right anyway</span>
+- <span class=fragment>it's hard</span><span class="fragment"> -> **IT is hard**, deal with it</span>
+- <span class=fragment>it's teadious</span><span class="fragment"> -> use better tools</span>
+- <span class=fragment>your spirits are crushed</span><span class="fragment"> -> <a href="https://dzone.com/articles/why-wouldnt-you-write-unit-tests">this is real ^^</a></span>
+- <span class=fragment>I don't know how!!!</span><span class="fragment"> -> that's a valid one :)</span>
+
+Note: engeering -> responsibility + hard craft
+<!--s-->
+## So... how to validate?
 <!--v-->
 
 ### The spec
@@ -202,6 +233,8 @@ for (const test of tests)
     }
 }
 ```
+
+Note: console.log() is **not** a testing framework
 <!--v-->
 
 ### The test
@@ -268,8 +301,25 @@ test("fib(n) returns n-th number of the fibbonachi sequence",
 <!--v-->
 
 ### Refactor! Refactor all the things!
+```js
+const fib = n =>
+  n < 2
+  ? n
+  : fib_matrix_power([1, 1, 0], n - 1)[0];
 
-- TODO
+const fib_matrix_power = (matrix, n) =>
+  matrix_times(...new Array(n).fill([1, 1, 0]));
+
+const matrix_times = (...matrices) =>
+    matrices.reduce(
+        ([a,b,c], [d,e,f]) => [a*d + b*e, a*e + b*f, b*e + c*f]
+    );
+```
+
+Note: Previous implementation was O(2^n), this is O(n) and can be O(log n)
+Does it work?
+Do you have to understand the code?
+Nope! Just run the test suite
 
 <!--s-->
 

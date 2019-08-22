@@ -1,9 +1,7 @@
-inspiration:
-- https://abstracta.us/blog/tools/ultimate-list-100-software-testing-quotes/
-
 ========
 
 - junior high, playing Assasin's Creed - it crashed
+- first game with such DRM, saves in the cloud
 - ???
 - our dependance on software - box, laptop, phone, car, lhc
 - software is hard - because of the stack
@@ -14,8 +12,7 @@ inspiration:
 
 ==============
 after units
-
-- integration / e2e tests - testable apps
+- integration / e2e tests - testable apps => move hexagonal architecture here
 
 ---
 can we do better:
@@ -56,5 +53,8 @@ takeaways:
 - teach how to test
 
 ====
+Maybes:
 - maybe add some screnshots from testing tools? :D
 - Linus case? "Given enough eyes all bugs are shallow"
+- https://abstracta.us/blog/tools/ultimate-list-100-software-testing-quotes/
+- fallacies programmers belive
