@@ -105,6 +105,98 @@ Note: bugs and defects
 
 Note: bug might be a feature, and defect might not be bug. Error -> overloaded :C
 
+<!--v-->
+
+<img src="/img/comememe.jpg" style="width: 45%;" />
+
+Note: you might be like: come at me bro!
+
+<!--v-->
+
+### Software is hard - modern software stack
+
+- <span class=fragment>CPU</span>
+- <span class=fragment>magic? (type "ring -3" into wikipedia)</span>
+- <span class=fragment>kernel (eg. Linux)</span>
+- <span class=fragment>shared libraries (eg. glibc)</span>
+- <span class=fragment>runtime (eg. cPython)</span>
+- <span class=fragment>libraries </span>
+- <span class=fragment>framework (eg. Django)</span>
+- <span class=fragment>Your code</span>
+
+Note: 
+- do a joke about your code in the next step
+- each step is complex, evolved through years and has shit-ton of code
+- add all the networking stack if you're doing webapps
+
+<!--v-->
+### Abstraction to the rescue?
+
+![](/img/duck.jpg)
+
+Note:
+- walks like a duck
+- quacks like a duck
+- needs batteries xD
+- Nope, it won't!
+
+<!--v-->
+```c
+#include <stdlib.h>
+#include <stdio.h>
+
+int main()
+{
+    const int numbers[] = { 1, -5, -2147483648 };
+    
+    for (int i = 0; i < (sizeof numbers / sizeof (int)); ++i) {
+        int num = numbers[i];
+        printf("Raw value: %d\n", num);
+        printf("Absolute value: %d\n", abs(num));
+    }
+
+}
+
+```
+
+
+<pre><code class="nohighlight" style="background: #3f3f3f" data-noescape>Raw value: 1
+Absolute value: 1
+Raw value: -5
+Absolute value: 5
+Raw value: -2147483648
+Absolute value: <span class="fragment highlight-red" data-fragment-index="2">-2147483648
+</span></code></pre>
+<!-- .element: class="fragment fade-up" data-fragment-index="1" -->
+
+Note:
+- some code in high level programming language
+
+<!--v-->
+
+- [Gynvael Coldwind on the matter](https://www.youtube.com/watch?v=hcp9ymfbofs&t=16m)
+
+<!--v-->
+#### Java good, si?
+```
+public class JavaGood
+{
+    public static void main(String []args)
+    {
+        System.out.println(Math.abs(-2147483648));
+    }
+}
+```
+```
+-2147483648 // Nope xD
+```
+<!-- .element: class="fragment fade-up"  -->
+
+Note:
+- I'd show you a JS version, but I'm gonna ignore BigInt and make fun that JS doesn't have integers
+- This kind of quircks are COUNTLESS!!!
+- You can never make mistake (but you do!) and still have defects
+
 <!--s-->
 ### Let's talk quality
 
@@ -203,11 +295,11 @@ Note: robots >> humans at certain tasks. Pick and place robot - 150 elements per
 
 - <span class=fragment>time pressure</span><span class="fragment"> -> you'll have to get it right anyway</span>
 - <span class=fragment>it's hard</span><span class="fragment"> -> **IT is hard**, deal with it</span>
-- <span class=fragment>it's teadious</span><span class="fragment"> -> use better tools</span>
+- <span class=fragment>it's teadious</span><span class="fragment"> -> you're doing it wrong</span>
 - <span class=fragment>your spirits are crushed</span><span class="fragment"> -> <a href="https://dzone.com/articles/why-wouldnt-you-write-unit-tests">this is real ^^</a></span>
 - <span class=fragment>I don't know how!!!</span><span class="fragment"> -> that's a valid one :)</span>
 
-Note: engeering -> responsibility + hard craft
+Note: engineering -> responsibility + hard craft
 <!--s-->
 ## So... how to validate?
 <!--v-->
@@ -424,6 +516,8 @@ function calculateInvoiceStuff(customer: Customer)
 }
 ```
 
+- IO || business
+
 Note: Dependency inversion principle - calculation only relies on Customer
 <!--v-->
 ### IO works
@@ -443,20 +537,23 @@ Note: what definitely works?
 - does my module work <span class="fragment highlight-blue" data-fragment-index="2">with X</span> -> <span class="fragment highlight-blue" data-fragment-index="2">integration</span> test
 - did I glue <span class="fragment highlight-blue" data-fragment-index="3">all the stuff</span> correctly -> <span class="fragment highlight-blue" data-fragment-index="3">E2E</span> test
 
-Note: maybe only do E2E?
-validating IO is slow and hard to maintain - don't abuse
+Note:
+- maybe only do E2E?
+- validating IO is slow and hard to maintain - don't abuse
+- but sometimes it makes sense
 <!--v-->
 
-### Hexagonal architecture
+<img src="/img/hex.jpg" style="width: 50%;" />
+<span class="fragment">hexagonal architecture</span>
 
-- TODO - https://marcus-biel.com/wp-content/uploads/2015/06/sasas-300x259.png <- do a pretty picture
-- seperate IO from business
-- more on https://www.simpleorientedarchitecture.com/defining-test-boundaries/
-
-Note: getting into the real of QA again -> making it easy to validate
+Note:
+- aren't my new bathroom tiles just plain... awesome? :D
+- hexagonal architecture - separating logic from IO app-wide
+- making it easy to validate
+- there are books and presentations about that
 <!--s-->
 
-## Can we do better?
+## Can we transcend units?
 <!--v-->
 ### Of course - data-driven / parametrized tests
 
@@ -494,4 +591,39 @@ each([
   }
 );
 ```
+
+<!--v-->
+### Property based tests
+
+```
+const fc = require('fast-check');
+...
+
+describe('contains', () => {
+    it('should always contain b in a+b+c', () =>
+        fc.assert(
+            fc.property(
+                fc.string(), fc.string(), fc.string(),
+                (a, b, c) => 
+                    contains(b, a + b + c))));
+});
+```
+<!--v-->
+
+### Stateful property based tests
+
+<img src="/img/tess.jpeg" style="width: 50%" />
+
+Note:
+- uses a simpler model to assert stuff about a stateful system
+
+<!--s-->
+
+## Now I'm just rambling about QA
+
+- tdd / bdd
+- pair programming
+- algebraic datatypes - haskell & rust
+- idris - dependant types
+- tla+
 

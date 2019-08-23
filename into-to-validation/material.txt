@@ -1,107 +1,18 @@
-========
-
-- move the stack + abstraction leakage to the vilans subtree
-
-- software is hard - because of the stack
-- abstration? that leaks
-<!--s-->
-
-### The stack
-http://chickencrap.com/media_images/2058.jpg
-<!--v-->
-### Abstraction leakage
-<!-- TODO: quote about duck that needs bateries -->
-
-<!--v-->
-#### Example
-```c
-#include <stdlib.h>
-#include <stdio.h>
-
-int main()
-{
-    const int numbers[] = { 1, -5, -2147483648 };
-    
-    for (int i = 0; i < (sizeof numbers / sizeof (int)); ++i) {
-        int num = numbers[i];
-        printf("Raw value: %d\n", num);
-        printf("Absolute value: %d\n", abs(num));
-    }
-
-}
-
-```
-
-
-<pre><code class="nohighlight" style="background: #3f3f3f" data-noescape>Raw value: 1
-Absolute value: 1
-Raw value: -5
-Absolute value: 5
-Raw value: -2147483648
-Absolute value: <span class="fragment highlight-red" data-fragment-index="2">-2147483648
-</span></code></pre>
-<!-- .element: class="fragment fade-up" data-fragment-index="1" -->
-
-<!--v-->
-#### Explanation
-TODO
-
-<!--v-->
-#### Java good, si?
-```
-public class JavaGood
-{
-    public static void main(String []args)
-    {
-        System.out.println(Math.abs(Integer.MIN_VALUE));
-    }
-}
-```
-```
--2147483648 // Nope xD
-```
-<!-- .element: class="fragment fade-up"  -->
-
-
-==============
-can we do better:
-
-- property based tests
-- stateful property based tests
-
-
----
-
-- qa
-    - techiniques
-        - tdd / bdd
-        - pair programming
-
-    - type systems
-        - asm
-        - C
-        - python
-        - algebraic datatypes - haskell & rust
-        - idris - dependant types
-
-    - ???
-        - coq / tla+
-        - https://www.youtube.com/results?search_query=tla%2B
-        - temporal logic for proving consensus algorithms
-================
-
-- ethics - why do we have still so crappy software?
-
 takeaways:
 - make your code testable
-- test to speed up the pace
-- teach how to test
+- test
+- teach others how to test
+
+- podróżuj, śnij, odkrywaj
 
 - CHANGE THE SHITTY SLIDE TRANSITONS
 - convert notes into bullets and make sure the hax works on the too
+- contact + question + thank you!
+
 ====
 Maybes:
 - maybe add some screnshots from testing tools? :D
 - Linus case? "Given enough eyes all bugs are shallow"
 - https://abstracta.us/blog/tools/ultimate-list-100-software-testing-quotes/
 - fallacies programmers belive
+- ethics - why do we have still so crappy software?
