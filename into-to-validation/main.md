@@ -3,87 +3,87 @@ title: Intro to Validation, QA and the Universe
 ---
 # Intro to Validation, QA and the Universe
 ### by Olgierd'd "allgreed" Kasprowicz
+
+Note: adjust the notes font-size to 3em
 <!--v-->
 
 ## If we can turn back time...
-<!-- pic of tardis -->
+<img src="/img/tardis.png" style="background: 0; border: 0; box-shadow: none; width: 30%;"/>
 
 <!--v-->
 
-## ...to the good old days
-<!-- pic of old computers / people -->
+## ...to the good old days - 2010
+![](/img/ac2.jpg)
+<!-- .element: class="fragment fade-up" -->
+
+Note: junior high - playing Assasin's creed 2 by Ubisoft. My first contact with always-online DRM. It probably had saves in the cloud too.
+<!--v-->
+
+![](/img/witcher-mem.png)
+
+<!--v-->
+![](/img/bsod.jpg)
+
+Note: lost my saves as well :C
+
+<!--v-->
+### Boo hoo!
+
+![](img/cry.gif)
+
+Note: make a fun of how insignificant my loss was - first time I was deeply disappointed with computers
 
 <!--s-->
 
 ## Current state of affairs
+
+<!-- disclaimer + whoami + info -->
+I work at Intel, but I'm **not** representing Intel today.
+
+All your opinions are belong to us.
+
+- source: [github.com/allgreed/presentations](https://github.com/allgreed/presentations)
+- questions: during (and after as well!)
+- shitstorm: after
+- feedback: much appreciated 
+- about me?
+
+Note: I somehow finish junior high, time goes on. All opinions belong to me or whatever. "to define is to limit" ~ Oscar Wilde
+<!--v-->
+### The machine?
+
+<img src="/img/eniac.jpg" style="width: 70%;" />
+
+Note:
+- few women in a lab. cheerful, well-dressed
+- note on security: closed toe shoes.
+- behind them
+- you know this machine, but the look different nowadays
+- eniac - a computer.
+<!--v-->
+
 <!-- pic of laptop, telephone and car -->
+<img src="/img/c0.jpg" style="width: 30%;" class="fragment" />
+<img src="/img/c1.jpg" style="width: 45%;" class="fragment" />
+<img src="/img/c2.jpeg" style="width: 45%;" class="fragment" />
+<img src="/img/c3.jpeg" style="width: 45%;" class="fragment" />
+
 Note: 
-- computer
-- computer that can make calls
-- computer that can drive
-<!--v-->
-
-## Disclaimer
-I work at Intel, but I'm not representing Intel today. All my opinions are belong to us.
-
-<!--s-->
-
-### The stack
-http://chickencrap.com/media_images/2058.jpg
-<!--v-->
-### Abstraction leakage
-<!-- TODO: quote about duck that needs bateries -->
+- TP x200 tablet - computer that can display images and play sounds
+- Iphone Se - can spy on you + make calls
+- Tesla Roadster - weights ~1200 kg (1/2 of an asian elephant) ~300 HP
+- computer that accelerates elementary particles
 
 <!--v-->
-#### Example
-```c
-#include <stdlib.h>
-#include <stdio.h>
 
-int main()
-{
-    const int numbers[] = { 1, -5, -2147483648 };
-    
-    for (int i = 0; i < (sizeof numbers / sizeof (int)); ++i) {
-        int num = numbers[i];
-        printf("Raw value: %d\n", num);
-        printf("Absolute value: %d\n", abs(num));
-    }
+![](/img/hackercodexd.jpg)
 
-}
-
-```
-
-
-<pre><code class="nohighlight" style="background: #3f3f3f" data-noescape>Raw value: 1
-Absolute value: 1
-Raw value: -5
-Absolute value: 5
-Raw value: -2147483648
-Absolute value: <span class="fragment highlight-red" data-fragment-index="2">-2147483648
-</span></code></pre>
-<!-- .element: class="fragment fade-up" data-fragment-index="1" -->
-
-<!--v-->
-#### Explanation
-TODO
-
-<!--v-->
-#### Java good, si?
-```
-public class JavaGood
-{
-    public static void main(String []args)
-    {
-        System.out.println(Math.abs(Integer.MIN_VALUE));
-    }
-}
-```
-```
--2147483648 // Nope xD
-```
-<!-- .element: class="fragment fade-up"  -->
-
+Note:
+- what's running on all those computer?
+- software!
+- we better hope it's a good software
+- it's jQuery actually on that picture xD
+- oops xD
 
 <!--s-->
 
@@ -93,17 +93,17 @@ public class JavaGood
 <img src="/img/defect.jpg" style="width: 45%;" />
 
 Note: bugs and defects
-errors ~ bugs | defects
 
 <!--v-->
 
 ### What is ...?
-- Love <span class=fragment>-> baby, don't hurt me.</span> <span class="fragment">no more.</span>
 - App <span class=fragment>-> collection of behaviours</span>
 - Bug <span class=fragment>-> behaviour that is unexpected by the user</span>
 - Defect <span class=fragment>-> deviation from the spec</span>
+- Error <span class=fragment>-> bug | defect</span><span class=fragment> - colloquially</span>
+- Love <span class=fragment>-> baby, don't hurt me.</span> <span class="fragment">no more.</span>
 
-Note: bug might be a feature, and defect might not be bug
+Note: bug might be a feature, and defect might not be bug. Error -> overloaded :C
 
 <!--s-->
 ### Let's talk quality
@@ -172,13 +172,12 @@ Note: specs -> more fine grained => more potential for defects
 Note: because bugs are added and effectively caught at different stages - you can sleep in advance!
 
 <!--s-->
-## The heros
+## The heroes
 <img src="/img/venn.png" style="background: 0; border: 0; box-shadow: none"/>
 
-Note: QA - increasing quality and making it cheaper
+Note: Validation - fighting defects
 Testing - fighting bugs
-Validation - fighting defects
-I'll talk mostly about validation and a bit abount QA
+QA - making the other 2 bearable
 <!--s-->
 
 ### Let the testers do the testing!

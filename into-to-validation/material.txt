@@ -1,14 +1,67 @@
 ========
 
-- junior high, playing Assasin's Creed - it crashed
-- first game with such DRM, saves in the cloud
-- ???
-- our dependance on software - box, laptop, phone, car, lhc
+- move the stack + abstraction leakage to the vilans subtree
+
 - software is hard - because of the stack
 - abstration? that leaks
-=====
+<!--s-->
 
-- disclaimer, info + whoami
+### The stack
+http://chickencrap.com/media_images/2058.jpg
+<!--v-->
+### Abstraction leakage
+<!-- TODO: quote about duck that needs bateries -->
+
+<!--v-->
+#### Example
+```c
+#include <stdlib.h>
+#include <stdio.h>
+
+int main()
+{
+    const int numbers[] = { 1, -5, -2147483648 };
+    
+    for (int i = 0; i < (sizeof numbers / sizeof (int)); ++i) {
+        int num = numbers[i];
+        printf("Raw value: %d\n", num);
+        printf("Absolute value: %d\n", abs(num));
+    }
+
+}
+
+```
+
+
+<pre><code class="nohighlight" style="background: #3f3f3f" data-noescape>Raw value: 1
+Absolute value: 1
+Raw value: -5
+Absolute value: 5
+Raw value: -2147483648
+Absolute value: <span class="fragment highlight-red" data-fragment-index="2">-2147483648
+</span></code></pre>
+<!-- .element: class="fragment fade-up" data-fragment-index="1" -->
+
+<!--v-->
+#### Explanation
+TODO
+
+<!--v-->
+#### Java good, si?
+```
+public class JavaGood
+{
+    public static void main(String []args)
+    {
+        System.out.println(Math.abs(Integer.MIN_VALUE));
+    }
+}
+```
+```
+-2147483648 // Nope xD
+```
+<!-- .element: class="fragment fade-up"  -->
+
 
 ==============
 can we do better:
@@ -44,6 +97,8 @@ takeaways:
 - test to speed up the pace
 - teach how to test
 
+- CHANGE THE SHITTY SLIDE TRANSITONS
+- convert notes into bullets and make sure the hax works on the too
 ====
 Maybes:
 - maybe add some screnshots from testing tools? :D
