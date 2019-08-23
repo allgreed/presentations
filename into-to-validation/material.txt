@@ -1,13 +1,6 @@
-takeaways:
-- make your code testable
-- test
-- teach others how to test
-
-- podróżuj, śnij, odkrywaj
-
-- CHANGE THE SHITTY SLIDE TRANSITONS
-- convert notes into bullets and make sure the hax works on the too
-- contact + question + thank you!
+After:
+- do a better speaker notes font-size hax
+- propagate reveal.json to the template
 
 ====
 Maybes:

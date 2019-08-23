@@ -4,7 +4,8 @@ title: Intro to Validation, QA and the Universe
 # Intro to Validation, QA and the Universe
 ### by Olgierd'd "allgreed" Kasprowicz
 
-Note: adjust the notes font-size to 3em
+Note:
+- adjust the notes font-size to 3em
 <!--v-->
 
 ## If we can turn back time...
@@ -16,7 +17,12 @@ Note: adjust the notes font-size to 3em
 ![](/img/ac2.jpg)
 <!-- .element: class="fragment fade-up" -->
 
-Note: junior high - playing Assasin's creed 2 by Ubisoft. My first contact with always-online DRM. It probably had saves in the cloud too.
+Note:
+- junior high
+- playing Assasin's creed 2
+- by Ubisoft.
+- (one of) first always-online DRM
+- probably had saves in the cloud too.
 <!--v-->
 
 ![](/img/witcher-mem.png)
@@ -24,14 +30,17 @@ Note: junior high - playing Assasin's creed 2 by Ubisoft. My first contact with 
 <!--v-->
 ![](/img/bsod.jpg)
 
-Note: lost my saves as well :C
+Note:
+- lost my saves as well :C
 
 <!--v-->
 ### Boo hoo!
 
 ![](img/cry.gif)
 
-Note: make a fun of how insignificant my loss was - first time I was deeply disappointed with computers
+Note:
+- make a fun of how insignificant my loss was
+- first time I was deeply disappointed with computers
 
 <!--s-->
 
@@ -46,9 +55,12 @@ All your opinions are belong to us.
 - questions: during (and after as well!)
 - shitstorm: after
 - feedback: much appreciated 
-- about me?
 
-Note: I somehow finish junior high, time goes on. All opinions belong to me or whatever. "to define is to limit" ~ Oscar Wilde
+Note:
+- I somehow finish junior high, time goes on.
+- Mentioned I work at Intel? xD
+- Law student joke ^^
+- All opinions belong to me or whatever was written.
 <!--v-->
 ### The machine?
 
@@ -92,7 +104,8 @@ Note:
 <img src="/img/bug.jpg" style="width: 45%;" />
 <img src="/img/defect.jpg" style="width: 45%;" />
 
-Note: bugs and defects
+Note:
+- bugs and defects
 
 <!--v-->
 
@@ -103,13 +116,17 @@ Note: bugs and defects
 - Error <span class=fragment>-> bug | defect</span><span class=fragment> - colloquially</span>
 - Love <span class=fragment>-> baby, don't hurt me.</span> <span class="fragment">no more.</span>
 
-Note: bug might be a feature, and defect might not be bug. Error -> overloaded :C
+Note:
+- bug might be a feature
+- defect might not be bug.
+- error -> overloaded :C
 
 <!--v-->
 
 <img src="/img/comememe.jpg" style="width: 45%;" />
 
-Note: you might be like: come at me bro!
+Note:
+- you might be like: come at me bro!
 
 <!--v-->
 
@@ -222,13 +239,16 @@ Note: this will work, 100%, right?
 
 ![](/img/pizza.jpg)
 
-Note: Sheryl Sandberg - "Finished is better than perfect", Pareto rule
+Note:
+- Sheryl Sandberg - "Finished is better than perfect"
+- Pareto rule
 
 <!--v-->
 
 ![](/gen/realhehfix.png)
 
-Note: now - this is uber, oui?
+Note:
+- now - this is uber, oui?
 
 <!--v-->
 ### What IBM did...
@@ -239,21 +259,28 @@ Note: now - this is uber, oui?
 
 <small>[full study](ftp://ftp.software.ibm.com/software/rational/info/do-more/RAW14109USEN.pdf)</small>
 
-Note: cost of rework, Mariner 1, 1962, $18.5 million - attributed to missing comma or extraneous semicolon
+Note:
+- cost of rework,
+- Mariner 1,
+- 1962, $18.5 million
+- attributed to missing comma or extraneous semicolon
 
 <!--v-->
 ### What do we trully desire :3
 
 ![](/gen/desired.png)
 
-Note: this is too single-minded however
+Note:
+- this is too single-minded however
 
 <!--v-->
 ### Bugs not created equal
 
 ![](img/many-bugs.jpg)
 
-Note: specs -> more fine grained => more potential for defects
+Note:
+- specs -> more fine grained => more potential for defects
+- because bugs are added and effectively caught at different stages
 
 <!--v-->
 
@@ -261,29 +288,37 @@ Note: specs -> more fine grained => more potential for defects
 
 ![](/gen/real.png)
 
-Note: because bugs are added and effectively caught at different stages - you can sleep in advance!
+Note:
+- you can't sleep in advance!
 
 <!--s-->
 ## The heroes
 <img src="/img/venn.png" style="background: 0; border: 0; box-shadow: none"/>
 
-Note: Validation - fighting defects
-Testing - fighting bugs
-QA - making the other 2 bearable
+Note:
+- Validation - fighting defects
+- Testing - fighting bugs
+- QA - making the other 2 bearable
 <!--s-->
 
 ### Let the testers do the testing!
 
 ![](gen/testers.png)
 
-Note: before we begin - some groud rules for validation. Tester -> testing. You -> validation.
+Note:
+- before we begin - some groud rules for validation.
+- Tester -> testing.
+- You -> validation.
 
 <!--v-->
 
 ### Manual validation? Nope.
 
 ![](img/robot.jpeg)
-Note: robots >> humans at certain tasks. Pick and place robot - 150 elements per minute with superb accuracy. Reduces regressions to minimum.
+Note:
+- robots >> humans at certain tasks.
+- pick and place robot - 150 elements per minute with superb accuracy.
+- reduces regressions to minimum.
 <!--v-->
  
 ### Why not validate?
@@ -299,7 +334,8 @@ Note: robots >> humans at certain tasks. Pick and place robot - 150 elements per
 - <span class=fragment>your spirits are crushed</span><span class="fragment"> -> <a href="https://dzone.com/articles/why-wouldnt-you-write-unit-tests">this is real ^^</a></span>
 - <span class=fragment>I don't know how!!!</span><span class="fragment"> -> that's a valid one :)</span>
 
-Note: engineering -> responsibility + hard craft
+Note:
+- engineering -> responsibility + hard craft
 <!--s-->
 ## So... how to validate?
 <!--v-->
@@ -325,7 +361,8 @@ for (const test of tests)
 }
 ```
 
-Note: console.log() is **not** a testing framework
+Note:
+- console.log() is **not** a testing framework
 <!--v-->
 
 ### The test
@@ -407,10 +444,11 @@ const matrix_times = (...matrices) =>
     );
 ```
 
-Note: Previous implementation was O(2^n), this is O(n) and can be O(log n)
-Does it work?
-Do you have to understand the code?
-Nope! Just run the test suite
+Note:
+- Previous implementation was O(2^n), this is O(n) and can be O(log n)
+- Does it work?
+- Do you have to understand the code?
+- Nope! Just run the test suite
 
 <!--s-->
 
@@ -430,9 +468,10 @@ Nope! Just run the test suite
 }
 </code></pre>
 
-Note: the simple examples != production code
-Because production code is rarely pure function
-!No error handling for the sake of demo
+Note:
+- the simple examples != production code
+- Because production code is rarely pure function
+- !No error handling for the sake of demo
 
 <!--v-->
 
@@ -445,15 +484,17 @@ Because production code is rarely pure function
 - <span class="fragment">kernel printer driver</span>
 
 <h1 style="color: #dc322f;" class="fragment">NOPE!</h1>
-Note: unmaintainable madness!
+Note:
+- unmaintainable madness!
 
 <!--v-->
 
 ![](img/square-peg-round-hole.jpeg)
 
 
-Note: Square Peg Round Hole, almost like 2 girls... xD
-Kwadratowy sworzeń okrągły otwór
+Note:
+- Square Peg Round Hole, almost like 2 girls... xD
+- Kwadratowy sworzeń okrągły otwór
 
 <!--v-->
 ### Test vs. testable code
@@ -461,7 +502,10 @@ Kwadratowy sworzeń okrągły otwór
 >
 > ~ Niccolò Machiavelli
 
-Note: Test -> testable code; Testable code -> tests; I'll talk about testable code
+Note:
+- Test -> testable code;
+- Testable code -> tests;
+- I'll talk about testable code
 
 <!--v-->
 ### Dependency Injection
@@ -478,7 +522,9 @@ function processInvoice(clientID, amount,
     ... // pure function now :D
 }
 ```
-Note: but this is kind of hacky... and gets messy quickly :C
+Note:
+- but this is just a trick
+- sometimes it works, sometimes it doesn't
 <!--v-->
 
 ### Why we test?
@@ -516,9 +562,11 @@ function calculateInvoiceStuff(customer: Customer)
 }
 ```
 
-- IO || business
+Note:
+- dependency inversion principle - calculation only relies on Customer
+- separate IO from business
+- have pure functions!
 
-Note: Dependency inversion principle - calculation only relies on Customer
 <!--v-->
 ### IO works
 
@@ -528,7 +576,8 @@ Note: Dependency inversion principle - calculation only relies on Customer
 - <span class="fragment highlight-green">writing text to a file</span>
 - <span class="fragment highlight-red">your code</span>
 
-Note: what definitely works?
+Note:
+- what definitely works?
 <!--s-->
 
 ## But I wanna validate IO!
@@ -617,9 +666,9 @@ describe('contains', () => {
 Note:
 - uses a simpler model to assert stuff about a stateful system
 
-<!--s-->
+<!--v-->
 
-## Now I'm just rambling about QA
+### Now I'm just rambling
 
 - tdd / bdd
 - pair programming
@@ -627,3 +676,30 @@ Note:
 - idris - dependant types
 - tla+
 
+<!--s-->
+
+## Key takeaways
+
+- make your code testable
+- test
+- teach others how to test
+
+<!--v-->
+### Explore, dream, discover
+~ Mark Twain
+
+<img src="/img/mark.jpeg" style="width: 30%" />
+
+<!--s-->
+# Fin
+
+<!--v-->
+## Questions?
+
+### Contact me!
+- physically in HS3
+- @allgreed on HS3 Slack / Freenode
+- <span style="direction: rtl;unicode-bidi: bidi-override;">orp.zciworpsak@dreiglo</span>
+
+Note: 
+- talk, walk, trade, dine, hang
