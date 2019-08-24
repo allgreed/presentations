@@ -6,11 +6,19 @@ title: Intro to Validation, QA and the Universe
 
 Note:
 - adjust the notes font-size to 3em
+- it's maginificent that you are here
+- who heard about software testing?
+- who creates software for money?
+- keep your hand up if you test that software
 <!--v-->
 
 ## If we can turn back time...
 <img src="/img/tardis.png" style="background: 0; border: 0; box-shadow: none; width: 30%;"/>
 
+Note:
+- this is a conversation
+- where do you wanna go?
+- nope, we're gonna go different place!
 <!--v-->
 
 ## ...to the good old days - 2010
@@ -670,6 +678,8 @@ Note:
 
 ### Now I'm just rambling
 
+- community management / user support
+- UX as user acceptance testing
 - tdd / bdd
 - pair programming
 - algebraic datatypes - haskell & rust
