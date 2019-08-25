@@ -2,10 +2,16 @@ After:
 - do a better speaker notes font-size hax
 - propagate reveal.json to the template
 
+
+- moneky patching niewyjaśniony - test doubles <= wincyj o tym
+- czy DI można lepiej? -> w tym konkretnym przykładie - Iwan
+- kod, który wygląda xD / obrazki zamiast property based testingu / fibbonachi matrix
+
+- get the example of car the brakes don't work
+
 ====
 Maybes:
+- change the history?
 - maybe add some screnshots from testing tools? :D
-- Linus case? "Given enough eyes all bugs are shallow"
-- https://abstracta.us/blog/tools/ultimate-list-100-software-testing-quotes/
-- fallacies programmers belive
-- ethics - why do we have still so crappy software?
+
+- ethics - why do we have still so crappy software? ???
