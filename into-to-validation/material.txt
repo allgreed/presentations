@@ -2,6 +2,7 @@ After:
 - do a better speaker notes font-size hax
 - propagate reveal.json to the template
 
+- fluxa wyłączyć xD
 
 - moneky patching niewyjaśniony - test doubles <= wincyj o tym
 - czy DI można lepiej? -> w tym konkretnym przykładie - Iwan
@@ -15,3 +16,4 @@ Maybes:
 - maybe add some screnshots from testing tools? :D
 
 - ethics - why do we have still so crappy software? ???
+
