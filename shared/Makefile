@@ -34,7 +34,7 @@ setup: node_modules
 
 
 node_modules:
-	yarn install --frozen-lockfile
+	yarn install --frozen-lockfile --ignore-engines
 
 # Utilities
 # ###############
