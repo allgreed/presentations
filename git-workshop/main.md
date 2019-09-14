@@ -33,6 +33,10 @@ title: Git workshop I
 
 <!--s-->
 
+### Git is a toolbox
+
+<!--v-->
+
 ## Before we begin
 
 ### GNU/Linux
@@ -51,26 +55,6 @@ git --version
 # to your doom
 git --version
 ```
-
-<!--v-->
-
-### Config (one time thing)
-
-```bash
-git config --global user.email [ your valid, existing email ]
-git config --global user.name [ your name ]
-# must in your PATH / aka executable from command line
-git config --global core.editor [ your favourite editor command ]
-```
-<!-- .element style="width: 100%" -->
-
-#### Example
-```bash
-git config --global user.email john@example.com
-git config --global user.name John Smith 
-git config --global core.editor vim
-```
-<!-- .element style="width: 100%" -->
 
 <!--s-->
 # Let's get rambling!!!
@@ -305,12 +289,12 @@ alias goback='git reset --hard HEAD~'
 ```
 
 <!--s-->
-- the usual - bla bla
-- I go for 50% understanding, if you don't get it after we move on record who gets it
 
 - Messy commits
 - typo in commit message
 - resolving merge conflicts
+
+<!--v-->
 
 - if still time: how to take a push back?
 - questions and problems
