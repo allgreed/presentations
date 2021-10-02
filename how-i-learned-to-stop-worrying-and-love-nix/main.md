@@ -4,7 +4,10 @@ title:  How I Learned to Stop Worrying and Love Nix
 # How I Learned to Stop Worrying and Love Nix 
 ### by Olgierd'd "allgreed" Kasprowicz
 
-TODO: intro slide opinions
+<!--v-->
+
+TODO: intro slide opinions / questions
+
 <!--s-->
 
 <!--v-->
@@ -185,7 +188,7 @@ make container
 ## Word of warrning
 ![](./img/mermaid.jpg)
 
-
+<!--v-->
 ### Hashes and derivations
 <!--TODO kiedyś fancy obrazek-->
 
@@ -290,7 +293,7 @@ https://github.com/allgreed/thinkpad-ec/blob/master/default.nix
   notify:
     - reload XRDB
   become: yes
----
+
 # handlers.yml
 
 - name: reload XRDB
@@ -305,10 +308,9 @@ https://github.com/allgreed/thinkpad-ec/blob/master/default.nix
 - actually works
 - actually congruent
 - actually fast
-- like Ansible
 
 <!--v-->
-### Demo
+### ~demo
     
 <!--v-->
 ```
@@ -323,10 +325,12 @@ NAME                    USED   AVAIL  REFER  MOUNTPOINT
     └── reserved        1G     103G   24K    none
 ```
 
+<!--v-->
 ### Problems (unresolved)
 - Tensorflow (Pytorch werks)
 - Nvidia Profiler GUI 
 - getting Brother printer to work
+<!--v-->
 
 ### Ideas
 - Knowledge sharing
@@ -340,7 +344,7 @@ NAME                    USED   AVAIL  REFER  MOUNTPOINT
 - basically Terraform + Ansible
 
 <!--v-->
-### Demo
+### ~demo
 
 <!--s-->
 
