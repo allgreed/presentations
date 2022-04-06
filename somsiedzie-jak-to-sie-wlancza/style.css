@@ -1,0 +1,9 @@
+.reveal code
+{
+    font-family: 'Source Code Pro';
+}
+
+blockquote
+{
+    width: 90% !important;
+}
