@@ -4,6 +4,9 @@ title:  Common Makefile Interface
 # Somsiedzie jak to się włancza?
 ### by Olgierd'd "allgreed" Kasprowicz
 
+Note:
+- telefon wyciszyć i w nieprzeszkadzać
+- wyłączyć workrave'a oraz redshifta
 <!--v-->
 
 ## Disclousure
