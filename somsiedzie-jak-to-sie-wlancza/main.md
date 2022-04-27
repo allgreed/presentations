@@ -25,7 +25,10 @@ Note:
 <!--s-->
 
 ## Historyjka
-Note: pewnego dnia poszedłem sobie do pracki
+Note:
+- historyjka nie jest z Dynatrace'u
+- (jak w tym nowym filmie o Kalinie Jędrusik) historyjka nie musiała się wydarzyć, ale mogła
+- pewnego dnia poszedłem sobie do pracki
 
 <!--v-->
 ![](./img/pracka-budynek.jpg)
