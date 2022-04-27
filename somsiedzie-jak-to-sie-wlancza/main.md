@@ -11,7 +11,10 @@ Note:
 
 ## Disclousure
 ![](./img/pracka-logo.png)
-Note: pracuję w Dyna. Wszystkie opinie należą do ich właścicieli.
+Note: 
+- pracuję w Dyna.
+- czy ktoś jest z Dynatrace'a również? :D
+- Wszystkie opinie należą do ich właścicieli.
 
 <!--v-->
 ## Source
