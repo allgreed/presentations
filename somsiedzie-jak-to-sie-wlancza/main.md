@@ -490,3 +490,4 @@ Note:
 ![](./img/qr.png)
 Note:
 - to jest QR kod do źródła ten z początku
+- ewentualnie jak będzie czas to możemy spróbować live demo
