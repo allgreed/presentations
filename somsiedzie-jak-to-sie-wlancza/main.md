@@ -145,13 +145,13 @@ Note: programowanie o programowaniu -> metaprogramowanie
 <!--v-->
 
 ![](./img/p0.png)
+TODO: przerobić na pojedyncyz projekt, ale rozwinięty, z idiosynkratycznym detalem
 Note:
 - projekt i sposoby interakcji
 - czy to jest jeden projekt?
 <!--v-->
-![](./img/p1.png)
-<!--v-->
-![](./img/p3.png)
+![](./img/p2.png)
+TODO: kilka projektów 3 mają idiosynkratyczne detale
 Note: 
 - czy one mają coś wspólnego?
 - jak możemy to opisać?
@@ -305,10 +305,10 @@ fuj:
 >_ make ble
 gcc a --siema -x=zog
 # ... gcc output omitted
+```
 Note:
 - substytucja (koncepcyjnie referencja do tego samego)
 - kompozycja
-```
 <!--v-->
 
 ## Reflection
