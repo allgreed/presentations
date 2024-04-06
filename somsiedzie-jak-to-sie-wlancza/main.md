@@ -236,6 +236,8 @@ Note:
 - bardzo praktyczny, zacytować prof Johanna Briffę o X forwardingu
 <!--v-->
 
+TODO: dodać animki do kodo-przykładów
+
 ## Dependnecies
 ```Makefile
 # Makefile
@@ -482,6 +484,8 @@ Note:
 - ale komendę można skopiować i coś w niej zmienić
 <!--v-->
 ![](./img/nix.png)
+
+TODO: czemu interface, czemu makefile, czemu... common? :D
 
 <!--s-->
 ## Call to action!
